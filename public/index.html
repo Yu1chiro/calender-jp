@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2024 Calendar</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body class="bg-gray-100">
+
+    <!-- Container for Calendar -->
+    <div class="max-w-5xl mx-auto p-6 grid grid-cols-1 gap-8">
+        
+        <!-- January -->
+        <div class="bg-white rounded-lg shadow-lg p-6" style="background-image: url('/bg.png');">
+            <div class="text-center mb-4">
+                <h2 class="text-3xl font-bold text-white">2024年 (令和6年)</h2>
+                <h3 class="text-4xl font-semibold text-white">1月</h3>
+            </div>
+
+            <!-- Image for January (dummy image as placeholder) -->
+            <div class="flex justify-center mb-4">
+                <img src="/1.png" width="600px" height="200px" alt="January Image" class="rounded-lg">
+            </div>
+
+            <!-- January Calendar Grid -->
+            <div style="border: 2px solid white; background-color: white;" class="grid grid-cols-7 text-center" >
+                <div style="border: 1px dashed gray;" class="font-bold text-red-500">日 <br><span class="text-red-500 text-sm">日曜日</span></div>
+                <div style="border: 1px dashed gray;"  class="font-bold">月 <br><span class="text-sm text-black">月曜日</span></div>
+                <div style="border: 1px dashed gray;" class="font-bold">火　<br><span class="text-black text-sm">火曜日</span></div>
+                <div style="border: 1px dashed gray;" class="font-bold">水　<br><span class="text-black text-sm">水曜日</span></div>
+                <div style="border: 1px dashed gray;" class="font-bold">木　<br><span class="text-black text-sm">木曜日</span></div>
+                <div style="border: 1px dashed gray;" class="font-bold">金　<br><span class="text-black text-sm">金曜日</span></div>
+                <div style="border: 1px dashed gray;" class="font-bold">土　<br><span class="text-black text-sm">土曜日</span></div>
+
+                <!-- Days for January -->
+                <div style="border: 1px dashed gray;" class="text-gray-400">31</div>
+                <div style="border: 1px dashed gray;" class="text-red-500" id="kanji-1" data-kanji="元日">1<br>元日</div>
+                <div style="border: 1px dashed gray;">2</div>
+                <div style="border: 1px dashed gray;">3</div>
+                <div style="border: 1px dashed gray;">4</div>
+                <div style="border: 1px dashed gray;">5</div>
+                <div style="border: 1px dashed gray;" class="text-blue-500">6</div>
+                <div style="border: 1px dashed gray;" class="text-red-500" id="kanji-2" data-kanji="花草の日">7 <br><span class="text-black">花草の日</span></div>
+                <div style="border: 1px dashed gray;" class="text-red-500" id="kanji-3" data-kanji="成人の日">8 <br>成人の日</div>
+                <div style="border: 1px dashed gray;">9</div>
+                <div style="border: 1px dashed gray;">10</div>
+                <div style="border: 1px dashed gray;" id="kanji-4" data-kanji="鏡開き">11<br>鏡開き</div>
+                <div style="border: 1px dashed gray;">12</div>
+                <div style="border: 1px dashed gray;" class="text-blue-500">13</div>
+                <div style="border: 1px dashed gray;" class="text-red-500 py-3">14</div>
+                <div style="border: 1px dashed gray;" class="py-3">15</div>
+                <div style="border: 1px dashed gray;" class="py-3">16</div>
+                <div style="border: 1px dashed gray;" class="py-3">17</div>
+                <div style="border: 1px dashed gray;" class="py-3">18</div>
+                <div style="border: 1px dashed gray;" class="py-3">19</div>
+                <div style="border: 1px dashed gray;" class="text-blue-500 py-3">20</div>
+                <div style="border: 1px dashed gray;" class="text-red-500 py-3">21</div>
+                <div style="border: 1px dashed gray;" class="py-3">22</div>
+                <div style="border: 1px dashed gray;" class="py-3">23</div>
+                <div style="border: 1px dashed gray;" class="py-3">24</div>
+                <div style="border: 1px dashed gray;" class="py-3">25</div>
+                <div style="border: 1px dashed gray;" class="py-3">26</div>
+                <div style="border: 1px dashed gray;" class="text-blue-500 py-3">27</div>
+                <div style="border: 1px dashed gray;" class="text-red-500 py-3">28</div>
+                <div style="border: 1px dashed gray;" class="py-3">29</div>
+                <div style="border: 1px dashed gray;" class="py-3">30</div>
+                <div style="border: 1px dashed gray;" class="py-3">31</div>
+                <div style="border: 1px dashed gray;" class="text-gray-500 py-3">1</div>
+                <div style="border: 1px dashed gray;" class="text-gray-500 py-3">2</div>
+                <div style="border: 1px dashed gray;" class="text-gray-500 py-3">3</div>
+                <!-- Continue the days... -->
+            </div>
+        </div>
+
+        <!-- February -->
+        <div class="bg-white rounded-lg shadow-lg p-6" style="background-image: url('/bg.png');" >
+            <div class="text-center mb-4">
+                <h2 class="text-3xl text-white font-bold">2024年 (令和6年)</h2>
+                <h3 class="text-4xl text-white font-semibold">2月</h3>
+            </div>
+
+            <!-- Image for January (dummy image as placeholder) -->
+            <div class="flex justify-center mb-4">
+                <img src="/2.png" width="600px" height="200px" alt="February Image" class="rounded-lg">
+            </div>
+
+           <!-- February Calendar Grid -->
+            <div style="border: 2px solid white; background-color: white;" class="grid grid-cols-7 text-center" >
+                <div style="border: 1px dashed gray;" class="font-bold text-red-500">日 <br><span class="text-red-500 text-sm">日曜日</span></div>
+                <div style="border: 1px dashed gray;"  class="font-bold">月 <br><span class="text-sm text-black">月曜日</span></div>
+                <div style="border: 1px dashed gray;" class="font-bold">火　<br><span class="text-black text-sm">火曜日</span></div>
+                <div style="border: 1px dashed gray;" class="font-bold">水　<br><span class="text-black text-sm">水曜日</span></div>
+                <div style="border: 1px dashed gray;" class="font-bold">木　<br><span class="text-black text-sm">木曜日</span></div>
+                <div style="border: 1px dashed gray;" class="font-bold">金　<br><span class="text-black text-sm">金曜日</span></div>
+                <div style="border: 1px dashed gray;" class="font-bold">土　<br><span class="text-black text-sm">土曜日</span></div>
+
+                <!-- Days for February -->
+               <div style="border: 1px dashed gray;" class="text-red-500">28</div>
+               <div style="border: 1px dashed gray;"  class="text-gray-400">29</div>
+               <div style="border: 1px dashed gray;"  class="text-gray-400">30</div>
+               <div style="border: 1px dashed gray;">1</div>
+               <div style="border: 1px dashed gray;">2</div>
+               <div style="border: 1px dashed gray;" class="text-blue-500" id="kanji-5" data-kanji="節分">3 <br>節分</div>
+               <div style="border: 1px dashed gray;" class="text-red-500">4</div>
+               <div style="border: 1px dashed gray;">5</div>
+               <div style="border: 1px dashed gray;">6</div>
+               <div style="border: 1px dashed gray;">7</div>
+               <div style="border: 1px dashed gray;">8</div>
+               <div style="border: 1px dashed gray;">9</div>
+               <div style="border: 1px dashed gray;" class="text-blue-500">10</div>
+               <div style="border: 1px dashed gray;" class="text-red-500" id="kanji-6" data-kanji="建国記念の日">11 <br>建国記念の日</div>
+               <div style="border: 1px dashed gray;" class="text-red-500" id="kanji-7" data-kanji="振替休日">12 <br>振替休日</div>
+               <div style="border: 1px dashed gray;">13</div>
+               <div style="border: 1px dashed gray;" id="kanji-8" data-kanji="バレンタインデー">14 <br>バレンタインデー</div>
+               <div style="border: 1px dashed gray;">15</div>
+               <div style="border: 1px dashed gray;">16</div>
+               <div style="border: 1px dashed gray;" class="text-blue-500">17</div>
+               <div style="border: 1px dashed gray;" class="text-red-500">18</div>
+               <div style="border: 1px dashed gray;">19</div>
+               <div style="border: 1px dashed gray;">20</div>
+               <div style="border: 1px dashed gray;">21</div>
+               <div style="border: 1px dashed gray;">22</div>
+               <div style="border: 1px dashed gray;" class="text-red-500" id="kanji-9" data-kanji="天皇誕生日">23 <br>天皇誕生日</div>
+               <div style="border: 1px dashed gray;" class="text-blue-500">24</div>
+               <div style="border: 1px dashed gray;" class="text-red-500">25</div>
+               <div style="border: 1px dashed gray;" class="py-3">26</div>
+               <div style="border: 1px dashed gray;" class="py-3">27</div>
+               <div style="border: 1px dashed gray;" class="py-3">28</div>
+               <div style="border: 1px dashed gray;" class="py-3">29</div>
+                <!-- Continue the days... -->
+            </div>
+        </div>
+        
+        <!-- March -->
+        <div class="bg-white rounded-lg shadow-lg p-6" style="background-image: url('/bg.png');" >
+            <div class="text-center mb-4">
+                <h2 class="text-3xl text-white font-bold">2024年 (令和6年)</h2>
+                <h3 class="text-4xl text-white font-semibold">3月</h3>
+            </div>
+
+            <div class="flex justify-center mb-4">
+                <img src="/3.png" width="600px" height="200px" alt="February Image" class="rounded-lg">
+            </div>
+
+            <div style="border: 2px solid white; background-color: white;" class="grid grid-cols-7 text-center" >
+                <div style="border: 1px dashed gray;" class="font-bold text-red-500">日 <br><span class="text-red-500 text-sm">日曜日</span></div>
+                <div style="border: 1px dashed gray;"  class="font-bold">月 <br><span class="text-sm text-black">月曜日</span></div>
+                <div style="border: 1px dashed gray;" class="font-bold">火　<br><span class="text-black text-sm">火曜日</span></div>
+                <div style="border: 1px dashed gray;" class="font-bold">水　<br><span class="text-black text-sm">水曜日</span></div>
+                <div style="border: 1px dashed gray;" class="font-bold">木　<br><span class="text-black text-sm">木曜日</span></div>
+                <div style="border: 1px dashed gray;" class="font-bold">金　<br><span class="text-black text-sm">金曜日</span></div>
+                <div style="border: 1px dashed gray;" class="font-bold">土　<br><span class="text-black text-sm">土曜日</span></div>
+
+                <!-- Days for February -->
+                <div style="border: 1px dashed gray;" class="py-3 text-red-500">25</div>
+                <div style="border: 1px dashed gray;" class="py-3 text-gray-500">26</div>
+                <div style="border: 1px dashed gray;" class="py-3 text-gray-500">27</div>
+                <div style="border: 1px dashed gray;" class="py-3 text-gray-500">28</div>
+                <div style="border: 1px dashed gray;" class="py-3 text-gray-500">29</div>
+                <div style="border: 1px dashed gray;" class="py-3">1</div>
+                <div style="border: 1px dashed gray;" class="py-3 text-blue-500">2</div>
+                <div style="border: 1px dashed gray;" id="kanji-10" data-kanji="ひな祭り" class="py-3 text-red-500">3 <br><span class="text-black">ひな祭り</span></div>
+                <div style="border: 1px dashed gray;" class="py-3">4</div>
+                <div style="border: 1px dashed gray;" class="py-3">5</div>
+                <div style="border: 1px dashed gray;" class="py-3">6</div>
+                <div style="border: 1px dashed gray;" class="py-3">7</div>
+                <div style="border: 1px dashed gray;" class="py-3">8</div>
+                <div style="border: 1px dashed gray;" class="py-3 text-blue-500">9</div>
+                <div style="border: 1px dashed gray;" class="py-3 text-red-500">10</div>
+                <div style="border: 1px dashed gray;" class="py-3">11</div>
+                <div style="border: 1px dashed gray;" class="py-3">12</div>
+                <div style="border: 1px dashed gray;" class="py-3">13</div>
+                <div style="border: 1px dashed gray;" id="kanji-11" data-kanji="ホワイトデー" class="py-3">14 <br>ホワイトデー</div>
+                <div style="border: 1px dashed gray;" class="py-3">15</div>
+                <div style="border: 1px dashed gray;" class="py-3 text-blue-500">16</div>
+                <div style="border: 1px dashed gray;" class="py-3 text-red-500">17</div>
+                <div style="border: 1px dashed gray;" class="py-3">18</div>
+                <div style="border: 1px dashed gray;" class="py-3">19</div>
+                <div style="border: 1px dashed gray;" id="kanji-12" data-kanji="春分の日" class="py-3 text-red-500">20 <br>春分の日</div>
+                <div style="border: 1px dashed gray;" class="py-3">21</div>
+                <div style="border: 1px dashed gray;" class="py-3">22</div>
+                <div style="border: 1px dashed gray;" class="py-3 text-blue-500">23</div>
+                <div style="border: 1px dashed gray;" class="py-3 text-red-500">24</div>
+                <div style="border: 1px dashed gray;" class="py-3">25</div>
+                <div style="border: 1px dashed gray;" class="py-3">26</div>
+                <div style="border: 1px dashed gray;" class="py-3">27</div>
+                <div style="border: 1px dashed gray;" class="py-3">28</div>
+                <div style="border: 1px dashed gray;" class="py-3">29</div>
+                <div style="border: 1px dashed gray;" class="py-3 text-blue-500">30</div>
+                <div style="border: 1px dashed gray;" class="py-3 text-red-500">31</div>
+            </div>
+        </div>
+        <!-- April -->
+        <div class="bg-white rounded-lg shadow-lg p-6" style="background-image: url('/bg.png');" >
+            <div class="text-center mb-4">
+                <h2 class="text-3xl text-white font-bold">2024年 (令和6年)</h2>
+                <h3 class="text-4xl text-white font-semibold">4月</h3>
+            </div>
+
+            <div class="flex justify-center mb-4">
+                <img src="/4.png" width="600px" height="200px" alt="February Image" class="rounded-lg">
+            </div>
+
+            <div style="border: 2px solid white; background-color: white;" class="grid grid-cols-7 text-center" >
+                <div style="border: 1px dashed gray;" class="font-bold text-red-500">日 <br><span class="text-red-500 text-sm">日曜日</span></div>
+                <div style="border: 1px dashed gray;"  class="font-bold">月 <br><span class="text-sm text-black">月曜日</span></div>
+                <div style="border: 1px dashed gray;" class="font-bold">火　<br><span class="text-black text-sm">火曜日</span></div>
+                <div style="border: 1px dashed gray;" class="font-bold">水　<br><span class="text-black text-sm">水曜日</span></div>
+                <div style="border: 1px dashed gray;" class="font-bold">木　<br><span class="text-black text-sm">木曜日</span></div>
+                <div style="border: 1px dashed gray;" class="font-bold">金　<br><span class="text-black text-sm">金曜日</span></div>
+                <div style="border: 1px dashed gray;" class="font-bold">土　<br><span class="text-black text-sm">土曜日</span></div>
+
+                <!-- Days for February -->
+                <div class="py-3 text-red-500" style="border: 1px dashed gray;">31</div>
+                <div class="py-3" id="kanji-13" data-kanji="エイプリルフール" style="border: 1px dashed gray;">1 <br>エイプリルフール</div>
+                <div class="py-3" style="border: 1px dashed gray;">2</div>
+                <div class="py-3" style="border: 1px dashed gray;">3</div>
+                <div class="py-3" style="border: 1px dashed gray;">4</div>
+                <div class="py-3" style="border: 1px dashed gray;">5</div>
+                <div class="py-3 text-blue-500" style="border: 1px dashed gray;">6</div>
+                <div class="py-3" style="border: 1px dashed gray;">7</div>
+                <div class="py-3" style="border: 1px dashed gray;">8</div>
+                <div class="py-3" style="border: 1px dashed gray;">9</div>
+                <div class="py-3" style="border: 1px dashed gray;">10</div>
+                <div class="py-3" style="border: 1px dashed gray;">11</div>
+                <div class="py-3" style="border: 1px dashed gray;">12</div>
+                <div class="py-3 text-blue-500" style="border: 1px dashed gray;">13</div>
+                <div class="py-3" style="border: 1px dashed gray;">14</div>
+                <div class="py-3" style="border: 1px dashed gray;">15</div>
+                <div class="py-3" style="border: 1px dashed gray;">16</div>
+                <div class="py-3" style="border: 1px dashed gray;">17</div>
+                <div class="py-3" style="border: 1px dashed gray;">18</div>
+                <div class="py-3" style="border: 1px dashed gray;">19</div>
+                <div class="py-3 text-blue-500" style="border: 1px dashed gray;">20</div>
+                <div class="py-3" style="border: 1px dashed gray;">21</div>
+                <div class="py-3" style="border: 1px dashed gray;">22</div>
+                <div class="py-3" style="border: 1px dashed gray;">23</div>
+                <div class="py-3" style="border: 1px dashed gray;">24</div>
+                <div class="py-3" style="border: 1px dashed gray;">25</div>
+                <div class="py-3" style="border: 1px dashed gray;">26</div>
+                <div class="py-3 text-blue-500" style="border: 1px dashed gray;">27</div>
+                <div class="py-3" style="border: 1px dashed gray;">28</div>
+                <div class="py-3" id="kanji-14" data-kanji="昭和の日" style="border: 1px dashed gray;">29 <br>昭和の日</div>
+                <div class="py-3" style="border: 1px dashed gray;">30</div>
+                <div class="py-3 text-gray-500" style="border: 1px dashed gray;">1</div>
+                <div class="py-3 text-gray-500" style="border: 1px dashed gray;">2</div>
+                <div class="py-3 text-gray-500" style="border: 1px dashed gray;">3</div>
+                <div class="py-3 text-gray-500" style="border: 1px dashed gray;">4</div>
+            </div>
+        </div>
+        <!-- May -->
+        <div class="bg-white rounded-lg shadow-lg p-6" style="background-image: url('/bg.png');" >
+            <div class="text-center mb-4">
+                <h2 class="text-3xl text-white font-bold">2024年 (令和6年)</h2>
+                <h3 class="text-4xl text-white font-semibold">5月</h3>
+            </div>
+
+            <div class="flex justify-center mb-4">
+                <img src="/5.png" width="600px" height="200px" alt="February Image" class="rounded-lg">
+            </div>
+
+            <div style="border: 2px solid white; background-color: white;" class="grid grid-cols-7 text-center" >
+                <div style="border: 1px dashed gray;" class="font-bold text-red-500">日 <br><span class="text-red-500 text-sm">日曜日</span></div>
+                <div style="border: 1px dashed gray;"  class="font-bold">月 <br><span class="text-sm text-black">月曜日</span></div>
+                <div style="border: 1px dashed gray;" class="font-bold">火　<br><span class="text-black text-sm">火曜日</span></div>
+                <div style="border: 1px dashed gray;" class="font-bold">水　<br><span class="text-black text-sm">水曜日</span></div>
+                <div style="border: 1px dashed gray;" class="font-bold">木　<br><span class="text-black text-sm">木曜日</span></div>
+                <div style="border: 1px dashed gray;" class="font-bold">金　<br><span class="text-black text-sm">金曜日</span></div>
+                <div style="border: 1px dashed gray;" class="font-bold">土　<br><span class="text-black text-sm">土曜日</span></div>
+                 <!--  -->
+                 <div class="py-3 text-gray-500" style="border: 1px dashed gray;">28</div>
+                 <div class="py-3 text-gray-500" style="border: 1px dashed gray;">29</div>
+                 <div class="py-3 text-gray-500" style="border: 1px dashed gray;">30</div>
+                 <div class="py-3" style="border: 1px dashed gray;">1</div>
+                 <div class="py-3" style="border: 1px dashed gray;">2</div>
+                 <div class="py-3 text-red-500" id="kanji-15" data-kanji="憲法記念日" style="border: 1px dashed gray;">3 <br>憲法記念日 </div>
+                 <div class="py-3 text-red-500" id="kanji-16" data-kanji="みどりの日" style="border: 1px dashed gray;">4 <br>みどりの日</div>
+                 <div class="py-3 text-red-500" id="kanji-17" data-kanji="こどもの日" style="border: 1px dashed gray;">5 <br>こどもの日</div>
+                 <div class="py-3 text-red-500" id="kanji-18" data-kanji="振替休日" style="border: 1px dashed gray;">6 <br>振替休日</div>
+                 <div class="py-3" style="border: 1px dashed gray;">7</div>
+                 <div class="py-3" style="border: 1px dashed gray;">8</div>
+                 <div class="py-3" style="border: 1px dashed gray;">9</div>
+                 <div class="py-3" style="border: 1px dashed gray;">10</div>
+                 <div class="py-3 text-blue-500" style="border: 1px dashed gray;">11</div>
+                 <div class="py-3 text-red-500" id="kanji-19" data-kanji="母の日" style="border: 1px dashed gray;">12 <br>母の日</div>
+                 <div class="py-3" style="border: 1px dashed gray;">13</div>
+                 <div class="py-3" style="border: 1px dashed gray;">14</div>
+                 <div class="py-3" style="border: 1px dashed gray;">15</div>
+                 <div class="py-3 text-red-500" style="border: 1px dashed gray;">16</div>
+                 <div class="py-3" style="border: 1px dashed gray;">17</div>
+                 <div class="py-3 text-blue-500" style="border: 1px dashed gray;">18</div>
+                 <div class="py-3" style="border: 1px dashed gray;">19</div>
+                 <div class="py-3" style="border: 1px dashed gray;">20</div>
+                 <div class="py-3" style="border: 1px dashed gray;">21</div>
+                 <div class="py-3" style="border: 1px dashed gray;">22</div>
+                 <div class="py-3" style="border: 1px dashed gray;">23</div>
+                 <div class="py-3" style="border: 1px dashed gray;">24</div>
+                 <div class="py-3 text-blue-500" style="border: 1px dashed gray;">25</div>
+                 <div class="py-3" style="border: 1px dashed gray;">26</div>
+                 <div class="py-3" style="border: 1px dashed gray;">27</div>
+                 <div class="py-3" style="border: 1px dashed gray;">28</div>
+                 <div class="py-3" style="border: 1px dashed gray;">29</div>
+                 <div class="py-3" style="border: 1px dashed gray;">30</div>
+                 <div class="py-3" style="border: 1px dashed gray;">31</div>
+                 <div class="py-3" style="border: 1px dashed gray;">1</div>
+            </div>
+        </div>
+        <!-- Juney -->
+        <div class="bg-white rounded-lg shadow-lg p-6" style="background-image: url('/bg.png');" >
+            <div class="text-center mb-4">
+                <h2 class="text-3xl text-white font-bold">2024年 (令和6年)</h2>
+                <h3 class="text-4xl text-white font-semibold">6月</h3>
+            </div>
+
+            <div class="flex justify-center mb-4">
+                <img src="/6.png" width="600px" height="200px" alt="February Image" class="rounded-lg">
+            </div>
+
+            <div style="border: 2px solid white; background-color: white;" class="grid grid-cols-7 text-center" >
+                <div style="border: 1px dashed gray;" class="font-bold text-red-500">日 <br><span class="text-red-500 text-sm">日曜日</span></div>
+                <div style="border: 1px dashed gray;"  class="font-bold">月 <br><span class="text-sm text-black">月曜日</span></div>
+                <div style="border: 1px dashed gray;" class="font-bold">火　<br><span class="text-black text-sm">火曜日</span></div>
+                <div style="border: 1px dashed gray;" class="font-bold">水　<br><span class="text-black text-sm">水曜日</span></div>
+                <div style="border: 1px dashed gray;" class="font-bold">木　<br><span class="text-black text-sm">木曜日</span></div>
+                <div style="border: 1px dashed gray;" class="font-bold">金　<br><span class="text-black text-sm">金曜日</span></div>
+                <div style="border: 1px dashed gray;" class="font-bold">土　<br><span class="text-black text-sm">土曜日</span></div>
+                 <!--  -->
+                 <div class="py-3 text-red-500" style="border: 1px dashed gray;">26</div>
+                 <div class="py-3 text-gray-500" style="border: 1px dashed gray;">27</div>
+                 <div class="py-3 text-gray-500" style="border: 1px dashed gray;">28</div>
+                 <div class="py-3 text-gray-500" style="border: 1px dashed gray;">29</div>
+                 <div class="py-3 text-gray-500" style="border: 1px dashed gray;">30</div>
+                 <div class="py-3 text-gray-500" style="border: 1px dashed gray;">31</div>
+                 <div class="py-3 text-blue-500" id="kanji-20" data-kanji="衣がえ" style="border: 1px dashed gray;">1 <br>衣がえ</div>
+                 <div class="py-3 text-red-500" style="border: 1px dashed gray;">2</div>
+                 <div class="py-3" style="border: 1px dashed gray;">3</div>
+                 <div class="py-3" style="border: 1px dashed gray;">4</div>
+                 <div class="py-3" style="border: 1px dashed gray;">5</div>
+                 <div class="py-3" style="border: 1px dashed gray;">6</div>
+                 <div class="py-3" style="border: 1px dashed gray;">7</div>
+                 <div class="py-3 text-blue-500" style="border: 1px dashed gray;">8</div>
+                 <div class="py-3 text-red-500" style="border: 1px dashed gray;">9</div>
+                 <div class="py-3" id="kanji-21" data-kanji="入梅" style="border: 1px dashed gray;">10 <br>入梅</div>
+                 <div class="py-3" style="border: 1px dashed gray;">11</div>
+                 <div class="py-3" style="border: 1px dashed gray;">12</div>
+                 <div class="py-3" style="border: 1px dashed gray;">13</div>
+                 <div class="py-3" style="border: 1px dashed gray;">14</div>
+                 <div class="py-3 text-blue-500" style="border: 1px dashed gray;">15</div>
+                 <div class="py-3 text-red-500" id="kanji-22" data-kanji="父の日" style="border: 1px dashed gray;">16 <br>父の日</div>
+                 <div class="py-3" style="border: 1px dashed gray;">17</div>
+                 <div class="py-3" style="border: 1px dashed gray;">18</div>
+                 <div class="py-3" style="border: 1px dashed gray;">19</div>
+                 <div class="py-3" style="border: 1px dashed gray;">20</div>
+                 <div class="py-3" id="kanji-22" data-kanji="夏至" style="border: 1px dashed gray;">21 <br>夏至</div>
+                 <div class="py-3 text-blue-500" style="border: 1px dashed gray;">22</div>
+                 <div class="py-3 text-red-500" style="border: 1px dashed gray;">23</div>
+                 <div class="py-3" style="border: 1px dashed gray;">24</div>
+                 <div class="py-3" style="border: 1px dashed gray;">25</div>
+                 <div class="py-3" style="border: 1px dashed gray;">26</div>
+                 <div class="py-3" style="border: 1px dashed gray;">27</div>
+                 <div class="py-3" style="border: 1px dashed gray;">28</div>
+                 <div class="py-3 text-blue-500" style="border: 1px dashed gray;">29</div>
+                 <div class="py-3 text-red-500" style="border: 1px dashed gray;">30</div>
+                 <div class="py-3 text-gray-500" style="border: 1px dashed gray;">1</div>
+            </div>
+        </div>
+        <!-- July -->
+        <div class="bg-white rounded-lg shadow-lg p-6" style="background-image: url('/bg.png');" >
+            <div class="text-center mb-4">
+                <h2 class="text-3xl text-white font-bold">2024年 (令和6年)</h2>
+                <h3 class="text-4xl text-white font-semibold">7月</h3>
+            </div>
+
+            <div class="flex justify-center mb-4">
+                <img src="/7.png" width="600px" height="200px" alt="February Image" class="rounded-lg">
+            </div>
+
+            <div style="border: 2px solid white; background-color: white;" class="grid grid-cols-7 text-center" >
+                <div style="border: 1px dashed gray;" class="font-bold text-red-500">日 <br><span class="text-red-500 text-sm">日曜日</span></div>
+                <div style="border: 1px dashed gray;"  class="font-bold">月 <br><span class="text-sm text-black">月曜日</span></div>
+                <div style="border: 1px dashed gray;" class="font-bold">火　<br><span class="text-black text-sm">火曜日</span></div>
+                <div style="border: 1px dashed gray;" class="font-bold">水　<br><span class="text-black text-sm">水曜日</span></div>
+                <div style="border: 1px dashed gray;" class="font-bold">木　<br><span class="text-black text-sm">木曜日</span></div>
+                <div style="border: 1px dashed gray;" class="font-bold">金　<br><span class="text-black text-sm">金曜日</span></div>
+                <div style="border: 1px dashed gray;" class="font-bold">土　<br><span class="text-black text-sm">土曜日</span></div>
+                 <!--  -->
+                 <div class="py-3 text-red-500" style="border: 1px dashed gray;">30</div>
+                 <div class="py-3" style="border: 1px dashed gray;">1</div>
+                 <div class="py-3" style="border: 1px dashed gray;">2</div>
+                 <div class="py-3" style="border: 1px dashed gray;">3</div>
+                 <div class="py-3" style="border: 1px dashed gray;">4</div>
+                 <div class="py-3" style="border: 1px dashed gray;">5</div>
+                 <div class="py-3 text-blue-500" style="border: 1px dashed gray;">6</div>
+                 <div class="py-3 text-red-500" id="kanji-23" data-kanji="七夕" style="border: 1px dashed gray;">7 <br>七夕</div>
+                 <div class="py-3" style="border: 1px dashed gray;">8</div>
+                 <div class="py-3" style="border: 1px dashed gray;">9</div>
+                 <div class="py-3" style="border: 1px dashed gray;">10</div>
+                 <div class="py-3" style="border: 1px dashed gray;">11</div>
+                 <div class="py-3" style="border: 1px dashed gray;">12</div>
+                 <div class="py-3 text-blue-500" style="border: 1px dashed gray;">13</div>
+                 <div class="py-3 text-red-500" style="border: 1px dashed gray;">14</div>
+                 <div class="py-3 text-red-500" id="kanji-24" data-kanji="海の日" style="border: 1px dashed gray;">15 <br>海の日</div>
+                 <div class="py-3" style="border: 1px dashed gray;">16</div>
+                 <div class="py-3" style="border: 1px dashed gray;">17</div>
+                 <div class="py-3" style="border: 1px dashed gray;">18</div>
+                 <div class="py-3" style="border: 1px dashed gray;">19</div>
+                 <div class="py-3 text-blue-500" style="border: 1px dashed gray;">20</div>
+                 <div class="py-3 text-red-500" style="border: 1px dashed gray;">21</div>
+                 <div class="py-3" style="border: 1px dashed gray;">22</div>
+                 <div class="py-3" style="border: 1px dashed gray;">23</div>
+                 <div class="py-3" style="border: 1px dashed gray;">24</div>
+                 <div class="py-3" style="border: 1px dashed gray;">25</div>
+                 <div class="py-3" style="border: 1px dashed gray;">26</div>
+                 <div class="py-3 text-blue-500" style="border: 1px dashed gray;">27</div>
+                 <div class="py-3 text-red-500" style="border: 1px dashed gray;">28</div>
+                 <div class="py-3" style="border: 1px dashed gray;">29</div>
+                 <div class="py-3" style="border: 1px dashed gray;">30</div>
+                 <div class="py-3" style="border: 1px dashed gray;">31</div>
+                 <div class="py-3 text-gray-500" style="border: 1px dashed gray;">1</div>
+                 <div class="py-3 text-gray-500" style="border: 1px dashed gray;">2</div>
+                 <div class="py-3 text-gray-500" style="border: 1px dashed gray;">3</div>
+            </div>
+        </div>
+        <!-- August -->
+        <div class="bg-white rounded-lg shadow-lg p-6" style="background-image: url('/bg.png');" >
+            <div class="text-center mb-4">
+                <h2 class="text-3xl text-white font-bold">2024年 (令和6年)</h2>
+                <h3 class="text-4xl text-white font-semibold">8月</h3>
+            </div>
+
+            <div class="flex justify-center mb-4">
+                <img src="/8.png" width="600px" height="200px" alt="February Image" class="rounded-lg">
+            </div>
+
+            <div style="border: 2px solid white; background-color: white;" class="grid grid-cols-7 text-center" >
+                <div style="border: 1px dashed gray;" class="font-bold text-red-500">日 <br><span class="text-red-500 text-sm">日曜日</span></div>
+                <div style="border: 1px dashed gray;"  class="font-bold">月 <br><span class="text-sm text-black">月曜日</span></div>
+                <div style="border: 1px dashed gray;" class="font-bold">火　<br><span class="text-black text-sm">火曜日</span></div>
+                <div style="border: 1px dashed gray;" class="font-bold">水　<br><span class="text-black text-sm">水曜日</span></div>
+                <div style="border: 1px dashed gray;" class="font-bold">木　<br><span class="text-black text-sm">木曜日</span></div>
+                <div style="border: 1px dashed gray;" class="font-bold">金　<br><span class="text-black text-sm">金曜日</span></div>
+                <div style="border: 1px dashed gray;" class="font-bold">土　<br><span class="text-black text-sm">土曜日</span></div>
+                 <!--  -->
+                 <div class="py-3 text-red-500" style="border: 1px dashed gray;">28</div>
+                 <div class="py-3 text-gray-500" style="border: 1px dashed gray;">29</div>
+                 <div class="py-3 text-gray-500" style="border: 1px dashed gray;">30</div>
+                 <div class="py-3 text-gray-500" style="border: 1px dashed gray;">31</div>
+                 <div class="py-3" style="border: 1px dashed gray;">1</div>
+                 <div class="py-3" style="border: 1px dashed gray;">2</div>
+                 <div class="py-3 text-blue-500" style="border: 1px dashed gray;">3</div>
+                 <div class="py-3 text-red-500" style="border: 1px dashed gray;">4</div>
+                 <div class="py-3" style="border: 1px dashed gray;">5</div>
+                 <div class="py-3" style="border: 1px dashed gray;">6</div>
+                 <div class="py-3" id="kanji-25" data-kanji="立秋" style="border: 1px dashed gray;">7 <br>立秋</div>
+                 <div class="py-3" style="border: 1px dashed gray;">8</div>
+                 <div class="py-3" style="border: 1px dashed gray;">9</div>
+                 <div class="py-3 text-blue-500" style="border: 1px dashed gray;">10</div>
+                 <div class="py-3 text-red-500" id="kanji-26" data-kanji="山の日" style="border: 1px dashed gray;">11 <br>山の日</div>
+                 <div class="py-3 text-red-500" id="kanji-27" data-kanji="振替休日" style="border: 1px dashed gray;">12 <br>振替休日</div>
+                 <div class="py-3" style="border: 1px dashed gray;">13</div>
+                 <div class="py-3" style="border: 1px dashed gray;">14</div>
+                 <div class="py-3" id="kanji-28" data-kanji="終戦記念日" style="border: 1px dashed gray;">15 <br>終戦記念日</div>
+                 <div class="py-3" style="border: 1px dashed gray;">16</div>
+                 <div class="py-3 text-blue-500" style="border: 1px dashed gray;">17</div>
+                 <div class="py-3 text-red-500" style="border: 1px dashed gray;">18</div>
+                 <div class="py-3" style="border: 1px dashed gray;">19</div>
+                 <div class="py-3" style="border: 1px dashed gray;">20</div>
+                 <div class="py-3" style="border: 1px dashed gray;">21</div>
+                 <div class="py-3" style="border: 1px dashed gray;">22</div>
+                 <div class="py-3" style="border: 1px dashed gray;">23</div>
+                 <div class="py-3 text-blue-500" style="border: 1px dashed gray;">24</div>
+                 <div class="py-3 text-red-500" style="border: 1px dashed gray;">25</div>
+                 <div class="py-3" style="border: 1px dashed gray;">26</div>
+                 <div class="py-3" style="border: 1px dashed gray;">27</div>
+                 <div class="py-3" style="border: 1px dashed gray;">28</div>
+                 <div class="py-3" style="border: 1px dashed gray;">29</div>
+                 <div class="py-3" style="border: 1px dashed gray;">30</div>
+                 <div class="py-3 text-blue-500" style="border: 1px dashed gray;">31</div>
+            </div>
+        </div>
+        <!-- September -->
+        <div class="bg-white rounded-lg shadow-lg p-6" style="background-image: url('/bg.png');" >
+            <div class="text-center mb-4">
+                <h2 class="text-3xl text-white font-bold">2024年 (令和6年)</h2>
+                <h3 class="text-4xl text-white font-semibold">9月</h3>
+            </div>
+
+            <div class="flex justify-center mb-4">
+                <img src="/9.png" width="600px" height="200px" alt="February Image" class="rounded-lg">
+            </div>
+
+            <div style="border: 2px solid white; background-color: white;" class="grid grid-cols-7 text-center" >
+                <div style="border: 1px dashed gray;" class="font-bold text-red-500">日 <br><span class="text-red-500 text-sm">日曜日</span></div>
+                <div style="border: 1px dashed gray;"  class="font-bold">月 <br><span class="text-sm text-black">月曜日</span></div>
+                <div style="border: 1px dashed gray;" class="font-bold">火　<br><span class="text-black text-sm">火曜日</span></div>
+                <div style="border: 1px dashed gray;" class="font-bold">水　<br><span class="text-black text-sm">水曜日</span></div>
+                <div style="border: 1px dashed gray;" class="font-bold">木　<br><span class="text-black text-sm">木曜日</span></div>
+                <div style="border: 1px dashed gray;" class="font-bold">金　<br><span class="text-black text-sm">金曜日</span></div>
+                <div style="border: 1px dashed gray;" class="font-bold">土　<br><span class="text-black text-sm">土曜日</span></div>
+                 <!--  -->
+                 <div class="py-3  text-red-500" style="border: 1px dashed gray;">1</div>
+                 <div class="py-3" style="border: 1px dashed gray;">2</div>
+                 <div class="py-3" style="border: 1px dashed gray;">3</div>
+                 <div class="py-3" style="border: 1px dashed gray;">4</div>
+                 <div class="py-3" style="border: 1px dashed gray;">5</div>
+                 <div class="py-3" style="border: 1px dashed gray;">6</div>
+                 <div class="py-3 text-blue-500" style="border: 1px dashed gray;">7</div>
+                 <div class="py-3  text-red-500" style="border: 1px dashed gray;">8</div>
+                 <div class="py-3" style="border: 1px dashed gray;">9</div>
+                 <div class="py-3" style="border: 1px dashed gray;">10</div>
+                 <div class="py-3" style="border: 1px dashed gray;">11</div>
+                 <div class="py-3" style="border: 1px dashed gray;">12</div>
+                 <div class="py-3" style="border: 1px dashed gray;">13</div>
+                 <div class="py-3 text-blue-500" style="border: 1px dashed gray;">14</div>
+                 <div class="py-3  text-red-500" style="border: 1px dashed gray;">15</div>
+                 <div class="py-3 text-red-500" id="kanji-29" data-kanji="敬老の日 " style="border: 1px dashed gray;">16 <br>敬老の日 </div>
+                 <div class="py-3" id="kanji-30" data-kanji="十五夜" style="border: 1px dashed gray;">17 <br>十五夜</div>
+                 <div class="py-3" style="border: 1px dashed gray;">18</div>
+                 <div class="py-3" style="border: 1px dashed gray;">19</div>
+                 <div class="py-3" style="border: 1px dashed gray;">20</div>
+                 <div class="py-3 text-blue-500" style="border: 1px dashed gray;">21</div>
+                 <div class="py-3 text-red-500" id="kanji-31" data-kanji="秋分の日" style="border: 1px dashed gray;">22 <br>秋分の日</div>
+                 <div class="py-3 text-red-500" id="kanji-32" data-kanji="振替休日" style="border: 1px dashed gray;">23 <br>振替休日</div>
+                 <div class="py-3" style="border: 1px dashed gray;">24</div>
+                 <div class="py-3" style="border: 1px dashed gray;">25</div>
+                 <div class="py-3" style="border: 1px dashed gray;">26</div>
+                 <div class="py-3" style="border: 1px dashed gray;">27</div>
+                 <div class="py-3 text-blue-500" style="border: 1px dashed gray;">28</div>
+                 <div class="py-3  text-red-500" style="border: 1px dashed gray;">29</div>
+                 <div class="py-3" style="border: 1px dashed gray;">30</div>
+                 <div class="py-3 text-gray-500" style="border: 1px dashed gray;">1</div>
+                 <div class="py-3 text-gray-500" style="border: 1px dashed gray;">2</div>
+                 <div class="py-3 text-gray-500" style="border: 1px dashed gray;">3</div>
+                 <div class="py-3 text-gray-500" style="border: 1px dashed gray;">4</div>
+                 <div class="py-3 text-gray-500" style="border: 1px dashed gray;">5</div>
+            </div>
+        </div>
+        <!-- October -->
+        <div class="bg-white rounded-lg shadow-lg p-6" style="background-image: url('/bg.png');" >
+            <div class="text-center mb-4">
+                <h2 class="text-3xl text-white font-bold">2024年 (令和6年)</h2>
+                <h3 class="text-4xl text-white font-semibold">10月</h3>
+            </div>
+
+            <div class="flex justify-center mb-4">
+                <img src="/10.png" width="600px" height="200px" alt="February Image" class="rounded-lg">
+            </div>
+
+            <div style="border: 2px solid white; background-color: white;" class="grid grid-cols-7 text-center" >
+                <div style="border: 1px dashed gray;" class="font-bold text-red-500">日 <br><span class="text-red-500 text-sm">日曜日</span></div>
+                <div style="border: 1px dashed gray;"  class="font-bold">月 <br><span class="text-sm text-black">月曜日</span></div>
+                <div style="border: 1px dashed gray;" class="font-bold">火　<br><span class="text-black text-sm">火曜日</span></div>
+                <div style="border: 1px dashed gray;" class="font-bold">水　<br><span class="text-black text-sm">水曜日</span></div>
+                <div style="border: 1px dashed gray;" class="font-bold">木　<br><span class="text-black text-sm">木曜日</span></div>
+                <div style="border: 1px dashed gray;" class="font-bold">金　<br><span class="text-black text-sm">金曜日</span></div>
+                <div style="border: 1px dashed gray;" class="font-bold">土　<br><span class="text-black text-sm">土曜日</span></div>
+                 <!--  -->
+                <div class="py-3 text-red-500" style="border: 1px dashed gray;">29</div>
+                <div class="py-3 text-gray-500" style="border: 1px dashed gray;">30</div>
+                <div class="py-3" id="kanji-33" data-kanji="衣がえ" style="border: 1px dashed gray;">1 <br>衣がえ</div>
+                <div class="py-3" style="border: 1px dashed gray;">2</div>
+                <div class="py-3" style="border: 1px dashed gray;">3</div>
+                <div class="py-3" style="border: 1px dashed gray;">4</div>
+                <div class="py-3 text-blue-500" style="border: 1px dashed gray;">5</div>
+                <div class="py-3  text-red-500" style="border: 1px dashed gray;">6</div>
+                <div class="py-3" style="border: 1px dashed gray;">7</div>
+                <div class="py-3" style="border: 1px dashed gray;">8</div>
+                <div class="py-3" style="border: 1px dashed gray;">9</div>
+                <div class="py-3" style="border: 1px dashed gray;">10</div>
+                <div class="py-3" style="border: 1px dashed gray;">11</div>
+                <div class="py-3 text-blue-500" style="border: 1px dashed gray;">12</div>
+                <div class="py-3  text-red-500" style="border: 1px dashed gray;">13</div>
+                <div class="py-3  text-red-500" id="kanji-34" data-kanji="スポーツの日" style="border: 1px dashed gray;">14 <br>スポーツの日</div>
+                <div class="py-3" style="border: 1px dashed gray;">15</div>
+                <div class="py-3" style="border: 1px dashed gray;">16</div>
+                <div class="py-3" style="border: 1px dashed gray;">17</div>
+                <div class="py-3" style="border: 1px dashed gray;">18</div>
+                <div class="py-3 text-blue-500" style="border: 1px dashed gray;">19</div>
+                <div class="py-3  text-red-500" style="border: 1px dashed gray;">20</div>
+                <div class="py-3" style="border: 1px dashed gray;">21</div>
+                <div class="py-3" style="border: 1px dashed gray;">22</div>
+                <div class="py-3" style="border: 1px dashed gray;">23</div>
+                <div class="py-3" style="border: 1px dashed gray;">24</div>
+                <div class="py-3" style="border: 1px dashed gray;">25</div>
+                <div class="py-3 text-blue-500" style="border: 1px dashed gray;">26</div>
+                <div class="py-3  text-red-500" style="border: 1px dashed gray;">27</div>
+                <div class="py-3" style="border: 1px dashed gray;">28</div>
+                <div class="py-3" style="border: 1px dashed gray;">29</div>
+                <div class="py-3" style="border: 1px dashed gray;">30</div>
+                <div class="py-3" id="kanji-35" data-kanji="ハロウィン" style="border: 1px dashed gray;">31 <br>ハロウィン</div>
+                <div class="py-3 text-gray-500" style="border: 1px dashed gray;">1</div>
+                <div class="py-3 text-blue-500" style="border: 1px dashed gray;">2</div>
+            </div>
+        </div>
+        <!-- November  -->
+        <div class="bg-white rounded-lg shadow-lg p-6" style="background-image: url('/bg.png');" >
+            <div class="text-center mb-4">
+                <h2 class="text-3xl text-white font-bold">2024年 (令和6年)</h2>
+                <h3 class="text-4xl text-white font-semibold">11月</h3>
+            </div>
+
+            <div class="flex justify-center mb-4">
+                <img src="/11.png" width="600px" height="200px" alt="February Image" class="rounded-lg">
+            </div>
+
+            <div style="border: 2px solid white; background-color: white;" class="grid grid-cols-7 text-center" >
+                <div style="border: 1px dashed gray;" class="font-bold text-red-500">日 <br><span class="text-red-500 text-sm">日曜日</span></div>
+                <div style="border: 1px dashed gray;"  class="font-bold">月 <br><span class="text-sm text-black">月曜日</span></div>
+                <div style="border: 1px dashed gray;" class="font-bold">火　<br><span class="text-black text-sm">火曜日</span></div>
+                <div style="border: 1px dashed gray;" class="font-bold">水　<br><span class="text-black text-sm">水曜日</span></div>
+                <div style="border: 1px dashed gray;" class="font-bold">木　<br><span class="text-black text-sm">木曜日</span></div>
+                <div style="border: 1px dashed gray;" class="font-bold">金　<br><span class="text-black text-sm">金曜日</span></div>
+                <div style="border: 1px dashed gray;" class="font-bold">土　<br><span class="text-black text-sm">土曜日</span></div>
+                 <!--  -->
+                 <div class="py-3 text-red-500" style="border: 1px dashed gray;">27</div>
+                 <div class="py-3 text-gray-500" style="border: 1px dashed gray;">28</div>
+                 <div class="py-3 text-gray-500" style="border: 1px dashed gray;">29</div>
+                 <div class="py-3 text-gray-500" style="border: 1px dashed gray;">30</div>
+                 <div class="py-3 text-gray-500" style="border: 1px dashed gray;">31</div>
+                 <div class="py-3" style="border: 1px dashed gray;">1</div>
+                 <div class="py-3 text-blue-500" style="border: 1px dashed gray;">2</div>
+                 <div class="py-3 text-red-500" id="kanji-36" data-kanji="文化の日" style="border: 1px dashed gray;">3 <br>文化の日</div>
+                 <div class="py-3 text-red-500" id="kanji-37" data-kanji="振替休日" style="border: 1px dashed gray;">4 <br>振替休日</div>
+                 <div class="py-3" style="border: 1px dashed gray;">5</div>
+                 <div class="py-3" style="border: 1px dashed gray;">6</div>
+                 <div class="py-3" style="border: 1px dashed gray;">7</div>
+                 <div class="py-3" style="border: 1px dashed gray;">8</div>
+                 <div class="py-3 text-blue-500" style="border: 1px dashed gray;">9</div>
+                 <div class="py-3 text-red-500" style="border: 1px dashed gray;">10</div>
+                 <div class="py-3" style="border: 1px dashed gray;">11</div>
+                 <div class="py-3" style="border: 1px dashed gray;">12</div>
+                 <div class="py-3" style="border: 1px dashed gray;">13</div>
+                 <div class="py-3" style="border: 1px dashed gray;">14</div>
+                 <div class="py-3" style="border: 1px dashed gray;">15</div>
+                 <div class="py-3 text-blue-500" style="border: 1px dashed gray;">16</div>
+                 <div class="py-3 text-red-500" style="border: 1px dashed gray;">17</div>
+                 <div class="py-3" style="border: 1px dashed gray;">18</div>
+                 <div class="py-3" style="border: 1px dashed gray;">19</div>
+                 <div class="py-3" style="border: 1px dashed gray;">20</div>
+                 <div class="py-3" style="border: 1px dashed gray;">21</div>
+                 <div class="py-3" style="border: 1px dashed gray;">22</div>
+                 <div class="py-3 text-red-500" id="kanji-38" data-kanji="勤労感謝の日" style="border: 1px dashed gray;">23 <br>勤労感謝の日</div>
+                 <div class="py-3 text-red-500" style="border: 1px dashed gray;">24</div>
+                 <div class="py-3" style="border: 1px dashed gray;">25</div>
+                 <div class="py-3" style="border: 1px dashed gray;">26</div>
+                 <div class="py-3" style="border: 1px dashed gray;">27</div>
+                 <div class="py-3" style="border: 1px dashed gray;">28</div>
+                 <div class="py-3" style="border: 1px dashed gray;">29</div>
+                 <div class="py-3 text-blue-500" style="border: 1px dashed gray;">30</div>
+            </div>
+        </div>
+        <!-- Desember -->
+        <div class="bg-white rounded-lg shadow-lg p-6" style="background-image: url('/bg.png');" >
+            <div class="text-center mb-4">
+                <h2 class="text-3xl text-white font-bold">2024年 (令和6年)</h2>
+                <h3 class="text-4xl text-white font-semibold">12月</h3>
+            </div>
+
+            <div class="flex justify-center mb-4">
+                <img src="/12.png" width="600px" height="200px" alt="February Image" class="rounded-lg">
+            </div>
+
+            <div style="border: 2px solid white; background-color: white;" class="grid grid-cols-7 text-center" >
+                <div style="border: 1px dashed gray;" class="font-bold text-red-500">日 <br><span class="text-red-500 text-sm">日曜日</span></div>
+                <div style="border: 1px dashed gray;"  class="font-bold">月 <br><span class="text-sm text-black">月曜日</span></div>
+                <div style="border: 1px dashed gray;" class="font-bold">火　<br><span class="text-black text-sm">火曜日</span></div>
+                <div style="border: 1px dashed gray;" class="font-bold">水　<br><span class="text-black text-sm">水曜日</span></div>
+                <div style="border: 1px dashed gray;" class="font-bold">木　<br><span class="text-black text-sm">木曜日</span></div>
+                <div style="border: 1px dashed gray;" class="font-bold">金　<br><span class="text-black text-sm">金曜日</span></div>
+                <div style="border: 1px dashed gray;" class="font-bold">土　<br><span class="text-black text-sm">土曜日</span></div>
+                 <!--  -->
+                 <div class="py-3 text-red-500" style="border: 1px dashed gray;">1</div>
+                 <div class="py-3" style="border: 1px dashed gray;">2</div>
+                 <div class="py-3" style="border: 1px dashed gray;">3</div>
+                 <div class="py-3" style="border: 1px dashed gray;">4</div>
+                 <div class="py-3" style="border: 1px dashed gray;">5</div>
+                 <div class="py-3" style="border: 1px dashed gray;">6</div>
+                 <div class="py-3 text-blue-500" style="border: 1px dashed gray;">7</div>
+                 <div class="py-3  text-red-500" style="border: 1px dashed gray;">8</div>
+                 <div class="py-3" style="border: 1px dashed gray;">9</div>
+                 <div class="py-3" style="border: 1px dashed gray;">10</div>
+                 <div class="py-3" style="border: 1px dashed gray;">11</div>
+                 <div class="py-3" style="border: 1px dashed gray;">12</div>
+                 <div class="py-3" style="border: 1px dashed gray;">13</div>
+                 <div class="py-3 text-blue-500" style="border: 1px dashed gray;">14</div>
+                 <div class="py-3  text-red-500" style="border: 1px dashed gray;">15</div>
+                 <div class="py-3" style="border: 1px dashed gray;">16</div>
+                 <div class="py-3" style="border: 1px dashed gray;">17</div>
+                 <div class="py-3" style="border: 1px dashed gray;">18</div>
+                 <div class="py-3" style="border: 1px dashed gray;">19</div>
+                 <div class="py-3" style="border: 1px dashed gray;">20</div>
+                 <div class="py-3 text-blue-500" id="kanji-39" data-kanji="冬至" style="border: 1px dashed gray;">21 <br>冬至</div>
+                 <div class="py-3  text-red-500" style="border: 1px dashed gray;">22</div>
+                 <div class="py-3" style="border: 1px dashed gray;">23</div>
+                 <div class="py-3" style="border: 1px dashed gray;">24</div>
+                 <div class="py-3" id="kanji-40" data-kanji="クリスマス" style="border: 1px dashed gray;">25 <br>クリスマス</div>
+                 <div class="py-3" style="border: 1px dashed gray;">26</div>
+                 <div class="py-3" style="border: 1px dashed gray;">27</div>
+                 <div class="py-3 text-blue-500" style="border: 1px dashed gray;">28</div>
+                 <div class="py-3  text-red-500" style="border: 1px dashed gray;">29</div>
+                 <div class="py-3" style="border: 1px dashed gray;">30</div>
+                 <div class="py-3" id="kanji-41" data-kanji="大晦日" style="border: 1px dashed gray;">31 <br>大晦日</div>
+                 <div class="py-3 text-red-500" style="border: 1px dashed gray;">1</div>
+                 <div class="py-3 text-gray-500" style="border: 1px dashed gray;">2</div>
+                 <div class="py-3 text-gray-500" style="border: 1px dashed gray;">3</div>
+                 <div class="py-3 text-gray-500" style="border: 1px dashed gray;">4</div>
+            </div>
+        </div>
+
+
+    
+    </div>
+<!-- <script src="/app.js"></script> -->
+ <script src="/main.js"></script>
+</body>
+</html>
