@@ -1,8 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
-    // ===== STATE MANAGEMENT =====
     let activeCard = null;
 
-    // ===== KONFIGURASI =====
     const CACHE_DURATION = {
         UNSPLASH: 604800,     // 7 hari dalam detik
         GEMINI: 604800,       // 7 hari dalam detik
@@ -101,7 +99,29 @@ document.addEventListener("DOMContentLoaded", function () {
             return cachedData;
         }
 
-        const promptInstruction = `Anda adalah seorang pakar bahasa Jepang. Jelaskan perayaan ${kanji} dan maknanya dalam budaya Jepang.`;
+        const promptInstruction = `
+        Anda adalah seorang profesor bahasa dan budaya Jepang dengan spesialisasi dalam kanji dan perayaan tradisional. Tolong jelaskan tentang perayaan ${kanji} mencakup:
+
+        1. Penulisan kanji yang benar (kanji asli)
+        2. Cara baca dalam:
+        - Romaji (sistem Hepburn)
+        - Hiragana
+        - Katakana (jika relevan)
+
+        3. Makna dan arti harfiah dari kanji yang digunakan
+
+        4. Detail perayaan:
+        - Sejarah dan asal-usul
+        - Waktu perayaan
+        - Kegiatan utama yang dilakukan
+        - Makanan khusus yang disajikan
+        - Tradisi dan ritual penting
+        - Makna budaya dan filosofis
+
+        5. Relevansi dan cara perayaan di Jepang modern
+
+Mohon berikan informasi yang akurat dan terpercaya dengan mengutip sumber-sumber resmi Jepang artikel-artikel koran & jurnal resmi.
+        `;
 
         try {
             const response = await fetch(`/api/gemini/${kanji}?prompt=${encodeURIComponent(promptInstruction)}`);

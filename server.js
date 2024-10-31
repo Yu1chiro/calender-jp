@@ -54,15 +54,46 @@ app.get('/api/gemini/:id', async (req, res) => {
         const model = genAI.getGenerativeModel({ model: "gemini-pro" });
 
         // Prompt yang dioptimalkan untuk respons yang konsisten
-        const prompt = `Anda adalah seorang pakar bahasa Jepang dengan pengalaman mengajar lebih dari 30 tahun. Pada kalender Jepang tahun 2024, jelaskan perayaan yang berkaitan "${id}" dan makna dari perayaan tersebut. Gunakan referensi dari jurnal, skripsi, atau artikel akademis yang relevan...
-        Berikan dalam format JSON yg rapi seperti contoh berikut:
-        {
-            "romaji": "[Romaji dalam bahasa Jepang]",
-            "title": "[Nama dalam bahasa Jepang]",
-            "translation": "[Terjemahan dalam bahasa Indonesia]",
-            "description": "[Jelaskan secara singkat 2-3 kalimat]"
-        }
-        Berikan hanya response JSON, tanpa keterangan tambahan.`;
+        const prompt = ` Anda adalah seorang profesor bahasa dan budaya Jepang dengan spesialisasi dalam kanji dan perayaan tradisional. Tolong jelaskan tentang perayaan ${id} mencakup:
+
+        1. Penulisan kanji yang benar (kanji asli)
+        2. Cara baca dalam:
+        - Romaji (sistem Hepburn)
+        - Hiragana
+        - Katakana (jika relevan)
+
+        3. Makna dan arti harfiah dari kanji yang digunakan
+
+        4. Detail perayaan:
+        - Sejarah dan asal-usul
+        - Waktu perayaan
+        - Kegiatan utama yang dilakukan
+        - Makanan khusus yang disajikan
+        - Tradisi dan ritual penting
+        - Makna budaya dan filosofis
+
+        5. Relevansi dan cara perayaan di Jepang modern
+
+        Mohon berikan informasi yang akurat dan terpercaya dengan mengutip sumber-sumber resmi Jepang artikel-artikel koran & jurnal resmi.
+                Berikan dalam format JSON yg rapi seperti contoh berikut:
+                {
+                    "romaji": "[Cara baca dalam:
+                    - Romaji (sistem Hepburn)
+                    - Hiragana
+                    - Katakana (jika relevan)]",
+                    "title": "[Nama dalam bahasa Jepang]",
+                    "translation": "[Terjemahan dalam bahasa Indonesia]",
+                    "description": "[
+                    Detail perayaan:
+                    - Sejarah dan asal-usul
+                    - Waktu perayaan
+                    - Kegiatan utama yang dilakukan
+                    - Makanan khusus yang disajikan
+                    - Tradisi dan ritual penting
+                    - Makna budaya dan filosofis
+                    Jelaskan secara singkat 10 kalimat]"
+                }
+                Berikan hanya response JSON, tanpa keterangan tambahan.`;
 
         const result = await model.generateContent(prompt);
         const response = await result.response;
