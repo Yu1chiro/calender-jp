@@ -91,7 +91,7 @@ app.get('/api/gemini/:id', async (req, res) => {
                     - Makanan khusus yang disajikan
                     - Tradisi dan ritual penting
                     - Makna budaya dan filosofis
-                    Jelaskan secara singkat 10 kalimat]"
+                    Jelaskan secara singkat 5 kalimat]"
                 }
                 Berikan hanya response JSON, tanpa keterangan tambahan.`;
 
